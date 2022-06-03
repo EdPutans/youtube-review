@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", "Arial", sans-serif;
+
 }
 
 :root{
@@ -35,17 +37,16 @@ header {
 }
 
 aside {
-  background-color: green;
   grid-area: sidebar;
+  border: 1px solid grey;
 }
 
 main {
-  background-color: yellow;
   grid-area: main;
 }
 
 .tag-bar {
-  background-color: red;
+  border: 1px solid grey;
   height: 100px;
 }
 
@@ -69,14 +70,15 @@ main {
 
 .videos-section__video{
   height: var(--video-tile-height);
-  background-color: purple; 
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  border: 1px solid gray;
 }
 
 .videos-section__video-thumbnail-container{
   overflow-y: hidden;
 }
+
 .vides-section__video-thumbnail {
   background: url(half-as-hoxtony-hi.webp);
   height: 100%;
@@ -85,4 +87,32 @@ main {
   background-repeat: no-repeat;
 }
 
+.videos-section__video-text-stuff {
+  display: grid;
+  grid-template-columns: 35px 1fr 17px;
+  grid-gap: 12px;
+  margin-top:12px;
+}
 
+.videos-section__video-text-stuff__logo{
+}
+
+.videos-section__video-text-stuff__logo > img {
+  border-radius:50%;
+}
+
+.videos-section__video-text-stuff__title-and-rest{
+  display: grid;
+  /* TODO: make it less jumpy. */
+}
+.videos-section__video-text-stuff__title-and-rest > h3 {
+  font-size: 14px;
+  line-height: 1.3;
+  color: rgb(3, 3, 3);
+  
+ }
+ .videos-section__video-text-stuff__title-and-rest > a {
+   font-size: 10px;
+   color: rgb(96, 96, 96);
+   text-decoration: none;
+ }
