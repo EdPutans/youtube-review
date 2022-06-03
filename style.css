@@ -6,6 +6,8 @@
 
 :root{
   --header-height: 60px;
+  --video-tile-height: 285px;
+  --video-tile-width: 335px;
 }
 
 body {
@@ -61,11 +63,26 @@ main {
 .videos-section{
   display: grid;
   padding: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--video-tile-height), 1fr));
   grid-gap: 5px;
 }
 
 .videos-section__video{
-  height: 200px;
-  background-color: purple;
+  height: var(--video-tile-height);
+  background-color: purple; 
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
+
+.videos-section__video-thumbnail-container{
+  overflow-y: hidden;
+}
+.vides-section__video-thumbnail {
+  background: url(half-as-hoxtony-hi.webp);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
